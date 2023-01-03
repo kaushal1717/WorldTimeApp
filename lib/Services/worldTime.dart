@@ -17,7 +17,6 @@ class WorldTime {
       Map data = jsonDecode(response.body);
       // print(data['datetime']);
       // print(data['utc_offset']);
-
       String datetime = data['datetime'];
       DateTime current = DateTime.parse(datetime.substring(0, 26));
 
@@ -25,7 +24,7 @@ class WorldTime {
       time = DateFormat.jm().format(current);
     } catch (e) {
       print('Error caught');
-      time = "Couldn't fetch a time ";
+      time = "Couldn't fetch a Time ";
     }
   }
 }
